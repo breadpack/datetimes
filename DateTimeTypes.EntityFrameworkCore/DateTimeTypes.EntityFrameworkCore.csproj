@@ -4,6 +4,16 @@
         <TargetFramework>net7.0</TargetFramework>
         <LangVersion>9</LangVersion>
         <RootNamespace>Starter.DateTypeTypes.EntityFrameworkCore</RootNamespace>
+        
+        <AssemblyName>Starter.DateTypeTypes.EntityFrameworkCore</AssemblyName>
+        <PackageId>Starter.DateTypeTypes.EntityFrameworkCore</PackageId>
+        <Description>Entity Framework Core support for Starter.DateTypeTypes</Description>
+        <Version>1.0.0</Version>
+        <Authors>Starter</Authors>
+        <Company>Starter</Company>
+        <PackageProjectUrl>https://github.com/startergames/datetimes</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/startergames/datetimes.git</RepositoryUrl>
+        <RepositoryType>github</RepositoryType>
     </PropertyGroup>
 
     <ItemGroup>

@@ -4,6 +4,17 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <LangVersion>9</LangVersion>
         <RootNamespace>Starter.DateTypeTypes.NewtonsoftJson</RootNamespace>
+        
+        <AssemblyName>Starter.DateTypeTypes.NewtonsoftJson</AssemblyName>
+        <PackageId>Starter.DateTypeTypes.NewtonsoftJson</PackageId>
+        <Description>Starter DateTypeTypes NewtonsoftJson</Description>
+        <Version>1.0.0</Version>
+        <Authors>Starter</Authors>
+        <Company>Starter</Company>
+        <PackageProjectUrl>https://github.com/startergames/datetimes</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/startergames/datetimes.git</RepositoryUrl>
+        <RepositoryType>github</RepositoryType>
+        <Nullable>disable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
