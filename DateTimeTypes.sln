@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeTypes", "DateTimeTypes\DateTimeTypes.csproj", "{CFCA3E21-74B3-4D5F-9D66-36A44F447318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeTypes.NewtonsoftJson", "DateTimeTypes.NewtonsoftJson\DateTimeTypes.NewtonsoftJson.csproj", "{515AE108-55F5-4470-9753-071AB7C75370}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeTypes.EntityFrameworkCore", "DateTimeTypes.EntityFrameworkCore\DateTimeTypes.EntityFrameworkCore.csproj", "{05BB2E47-E5C3-4F2D-988E-AA649D3A4BDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFCA3E21-74B3-4D5F-9D66-36A44F447318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFCA3E21-74B3-4D5F-9D66-36A44F447318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFCA3E21-74B3-4D5F-9D66-36A44F447318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFCA3E21-74B3-4D5F-9D66-36A44F447318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{515AE108-55F5-4470-9753-071AB7C75370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{515AE108-55F5-4470-9753-071AB7C75370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{515AE108-55F5-4470-9753-071AB7C75370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{515AE108-55F5-4470-9753-071AB7C75370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05BB2E47-E5C3-4F2D-988E-AA649D3A4BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05BB2E47-E5C3-4F2D-988E-AA649D3A4BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05BB2E47-E5C3-4F2D-988E-AA649D3A4BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05BB2E47-E5C3-4F2D-988E-AA649D3A4BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
