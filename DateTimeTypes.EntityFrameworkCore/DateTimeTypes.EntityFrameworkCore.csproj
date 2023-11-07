@@ -14,6 +14,7 @@
         <PackageProjectUrl>https://github.com/startergames/datetimes</PackageProjectUrl>
         <RepositoryUrl>https://github.com/startergames/datetimes.git</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
