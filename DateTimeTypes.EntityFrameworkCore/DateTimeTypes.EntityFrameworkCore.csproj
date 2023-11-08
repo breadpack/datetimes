@@ -3,10 +3,10 @@
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <LangVersion>9</LangVersion>
-        <RootNamespace>Starter.DateTypeTypes.EntityFrameworkCore</RootNamespace>
+        <RootNamespace>Starter.DateTimeTypes.EntityFrameworkCore</RootNamespace>
         
-        <AssemblyName>Starter.DateTypeTypes.EntityFrameworkCore</AssemblyName>
-        <PackageId>Starter.DateTypeTypes.EntityFrameworkCore</PackageId>
+        <AssemblyName>Starter.DateTimeTypes.EntityFrameworkCore</AssemblyName>
+        <PackageId>Starter.DateTimeTypes.EntityFrameworkCore</PackageId>
         <Description>Entity Framework Core support for Starter.DateTypeTypes</Description>
         <Version>1.0.0</Version>
         <Authors>Starter</Authors>

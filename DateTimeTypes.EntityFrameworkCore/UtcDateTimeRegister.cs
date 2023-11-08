@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using Starter.DateTimeTypes;
 
-namespace Starter.DateTypeTypes.EntityFrameworkCore {
+namespace Starter.DateTimeTypes.EntityFrameworkCore {
     public static class UtcDateTimeRegister {
         public static void UseUtcDateTimeForNpgsql(this ModelConfigurationBuilder configurationBuilder) {
             configurationBuilder

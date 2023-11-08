@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Starter.DateTimeTypes;
 
-namespace Starter.DateTypeTypes.NewtonsoftJson {
+namespace Starter.DateTimeTypes.NewtonsoftJson {
     public class UtcDateTimeJsonConverter : JsonConverter {
         public override bool CanConvert(Type objectType) {
             return objectType == typeof(UtcDateTime);

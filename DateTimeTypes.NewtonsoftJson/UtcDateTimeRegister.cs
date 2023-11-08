@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Starter.DateTypeTypes.NewtonsoftJson {
+namespace Starter.DateTimeTypes.NewtonsoftJson {
     public static class UtcDateTimeRegister {
         public static JsonSerializerSettings UseUtcDateTime(this JsonSerializerSettings settings) {
             settings.Converters.Add(new UtcDateTimeJsonConverter());
