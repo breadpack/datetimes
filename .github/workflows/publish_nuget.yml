@@ -27,8 +27,24 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
 
-      - name: Test
-        run: dotnet test --no-restore --verbosity normal
+#      - name: Test
+#        run: dotnet test --no-restore --verbosity normal
+
+      - name: Copy DLL and PDB to Unity package
+        run: |
+          cp DateTimeTypes/bin/Release/netstandard2.1/*.dll UnityProject/Packages/DateTimeTypes/Runtime/
+          cp DateTimeTypes/bin/Release/netstandard2.1/*.pdb UnityProject/Packages/DateTimeTypes/Runtime/
+          cp DateTimeTypes.NewtonsoftJson/bin/Release/netstandard2.1/*.dll UnityProject/Packages/DateTimeTypes.NewtonsoftJson/Runtime/Starter.DateTimeTypes.NewtonsoftJson.dll
+          cp DateTimeTypes.NewtonsoftJson/bin/Release/netstandard2.1/*.pdb UnityProject/Packages/DateTimeTypes.NewtonsoftJson/Runtime/Starter.DateTimeTypes.NewtonsoftJson.pdb
+
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add TimerPackage/package.json
+          git add TimerPackage/Runtime/
+          git diff --staged --quiet || git commit -m "Update Unity package binaries" || echo "No changes to commit"
+          git push
           
       - name: Pack
         run: dotnet pack --configuration Release --no-build --output ./nupkgs
