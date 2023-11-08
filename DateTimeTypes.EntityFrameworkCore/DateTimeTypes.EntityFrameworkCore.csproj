@@ -8,7 +8,7 @@
         <AssemblyName>Starter.DateTimeTypes.EntityFrameworkCore</AssemblyName>
         <PackageId>Starter.DateTimeTypes.EntityFrameworkCore</PackageId>
         <Description>Entity Framework Core support for Starter.DateTypeTypes</Description>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <Authors>Starter</Authors>
         <Company>Starter</Company>
         <PackageProjectUrl>https://github.com/startergames/datetimes</PackageProjectUrl>
