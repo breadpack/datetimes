@@ -3,19 +3,19 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <LangVersion>9</LangVersion>
-        <RootNamespace>Starter.DateTimeTypes</RootNamespace>
-        <AssemblyName>Starter.DateTimeTypes</AssemblyName>
-        <PackageId>Starter.DateTimeTypes</PackageId>
+        <RootNamespace>BreadPack.DateTimeTypes</RootNamespace>
+        <AssemblyName>BreadPack.DateTimeTypes</AssemblyName>
+        <PackageId>dev.breadpack.DateTimeTypes</PackageId>
         <Version>1.0.1</Version>
-        <Authors>Starter</Authors>
-        <Company>Starter</Company>
+        <Authors>BreadPack</Authors>
         <Description>Utc, Local, Unspecified 처럼 명확하지 않은 시간 처리로 인한 오류 방지를 위해서 정해진 Kind의 DateTime 만을 처리하기 위한 DateTime 타입들을 제공합니다.</Description>
-        <PackageProjectUrl>https://github.com/startergames/datetimes</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/startergames/datetimes.git</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/breadpack/datetimes</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/breadpack/datetimes.git</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
         <PackageTags>DateTime, Kind, Utc, Local, Unspecified</PackageTags>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <Nullable>enable</Nullable>
+        <Title>DateTimeTypes</Title>
     </PropertyGroup>
 
     <ItemGroup>

@@ -3,19 +3,19 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <LangVersion>9</LangVersion>
-        <RootNamespace>Starter.DateTimeTypes.NewtonsoftJson</RootNamespace>
+        <RootNamespace>BreadPack.DateTimeTypes.NewtonsoftJson</RootNamespace>
         
-        <AssemblyName>Starter.DateTimeTypes.NewtonsoftJson</AssemblyName>
-        <PackageId>Starter.DateTimeTypes.NewtonsoftJson</PackageId>
-        <Description>Starter DateTimeTypes NewtonsoftJson</Description>
+        <AssemblyName>BreadPack.DateTimeTypes.NewtonsoftJson</AssemblyName>
+        <PackageId>dev.breadpack.DateTimeTypes.NewtonsoftJson</PackageId>
+        <Description>NewtonsoftJson custom serializer for DateTimeTypes</Description>
         <Version>1.0.1</Version>
-        <Authors>Starter</Authors>
-        <Company>Starter</Company>
-        <PackageProjectUrl>https://github.com/startergames/datetimes</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/startergames/datetimes.git</RepositoryUrl>
+        <Authors>BreadPack</Authors>
+        <PackageProjectUrl>https://github.com/breadpack/datetimes</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/breadpack/datetimes.git</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
         <Nullable>disable</Nullable>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <Title>DateTimeTypes.NewtonsoftJson</Title>
     </PropertyGroup>
 
     <ItemGroup>

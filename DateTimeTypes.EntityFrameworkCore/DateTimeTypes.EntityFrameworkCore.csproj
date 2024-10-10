@@ -3,18 +3,18 @@
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <LangVersion>9</LangVersion>
-        <RootNamespace>Starter.DateTimeTypes.EntityFrameworkCore</RootNamespace>
+        <RootNamespace>BreadPack.DateTimeTypes.EntityFrameworkCore</RootNamespace>
         
-        <AssemblyName>Starter.DateTimeTypes.EntityFrameworkCore</AssemblyName>
-        <PackageId>Starter.DateTimeTypes.EntityFrameworkCore</PackageId>
-        <Description>Entity Framework Core support for Starter.DateTypeTypes</Description>
+        <AssemblyName>BreadPack.DateTimeTypes.EntityFrameworkCore</AssemblyName>
+        <PackageId>dev.breadpack.DateTimeTypes.EntityFrameworkCore</PackageId>
+        <Description>Entity Framework Core support for DateTypeTypes</Description>
         <Version>1.0.1</Version>
-        <Authors>Starter</Authors>
-        <Company>Starter</Company>
-        <PackageProjectUrl>https://github.com/startergames/datetimes</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/startergames/datetimes.git</RepositoryUrl>
+        <Authors>BreadPack</Authors>
+        <PackageProjectUrl>https://github.com/breadpack/datetimes</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/breadpack/datetimes.git</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <Title>DateTimeTypes.EntityFrameworkCore</Title>
     </PropertyGroup>
 
     <ItemGroup>

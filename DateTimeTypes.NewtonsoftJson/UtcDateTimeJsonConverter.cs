@@ -1,8 +1,9 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using Newtonsoft.Json;
-using Starter.DateTimeTypes;
+using BreadPack.DateTimeTypes;
 
-namespace Starter.DateTimeTypes.NewtonsoftJson {
+namespace BreadPack.DateTimeTypes.NewtonsoftJson {
     public class UtcDateTimeJsonConverter : JsonConverter {
         public override bool CanConvert(Type objectType) {
             return objectType == typeof(UtcDateTime);
@@ -23,11 +24,11 @@ namespace Starter.DateTimeTypes.NewtonsoftJson {
             }
 
             if (reader.TokenType == JsonToken.Date) {
-                return UtcDateTime.ConvertFrom((DateTime)reader.Value);
+                return UtcDateTime.ConvertFrom((DateTime)reader.Value!);
             }
 
             if (reader.TokenType == JsonToken.String) {
-                return UtcDateTime.Parse((string)reader.Value);
+                return UtcDateTime.Parse((string)reader.Value!);
             }
 
             throw new JsonSerializationException($"Unexpected token type: {reader.TokenType}");

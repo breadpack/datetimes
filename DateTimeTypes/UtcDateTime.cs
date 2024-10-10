@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Runtime.Serialization;
 
-namespace Starter.DateTimeTypes {
+namespace BreadPack.DateTimeTypes {
     public struct UtcDateTime : IComparable<UtcDateTime>
                               , IEquatable<UtcDateTime>
                               , IComparable
@@ -12,7 +12,7 @@ namespace Starter.DateTimeTypes {
         public static UtcDateTime Now      => new(DateTime.UtcNow);
         public static UtcDateTime MaxValue => new(DateTimeOffset.MaxValue.UtcDateTime);
         public static UtcDateTime MinValue => new(DateTimeOffset.MinValue.UtcDateTime);
-
+        
         private UtcDateTime(DateTime dateTime) {
             if (dateTime == DateTime.MinValue)
                 dateTime = DateTimeOffset.MinValue.UtcDateTime;
