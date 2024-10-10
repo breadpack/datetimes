@@ -31,19 +31,19 @@ jobs:
 
       - name: Copy DLL and PDB to Unity package
         run: |
-          cp -f DateTimeTypes/bin/Release/netstandard2.1/*.dll UnityProject/Packages/DateTimeTypes/Runtime/
-          cp -f DateTimeTypes/bin/Release/netstandard2.1/*.pdb UnityProject/Packages/DateTimeTypes/Runtime/
-          cp -f DateTimeTypes.NewtonsoftJson/bin/Release/netstandard2.1/*.dll UnityProject/Packages/DateTimeTypes.NewtonsoftJson/Runtime/
-          cp -f DateTimeTypes.NewtonsoftJson/bin/Release/netstandard2.1/*.pdb UnityProject/Packages/DateTimeTypes.NewtonsoftJson/Runtime/
+          cp -f DateTimeTypes/bin/Release/netstandard2.1/*.dll UnityPackages/DateTimeTypes/Runtime/
+          cp -f DateTimeTypes/bin/Release/netstandard2.1/*.pdb UnityPackages/DateTimeTypes/Runtime/
+          cp -f DateTimeTypes.NewtonsoftJson/bin/Release/netstandard2.1/*.dll UnityPackages/DateTimeTypes.NewtonsoftJson/Runtime/
+          cp -f DateTimeTypes.NewtonsoftJson/bin/Release/netstandard2.1/*.pdb UnityPackages/DateTimeTypes.NewtonsoftJson/Runtime/
 
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add UnityProject/Packages/DateTimeTypes/package.json
-          git add UnityProject/Packages/DateTimeTypes/Runtime/
-          git add UnityProject/Packages/DateTimeTypes.NewtonsoftJson/package.json
-          git add UnityProject/Packages/DateTimeTypes.NewtonsoftJson/Runtime/
+          git add UnityPackages/DateTimeTypes/package.json
+          git add UnityPackages/DateTimeTypes/Runtime/
+          git add UnityPackages/DateTimeTypes.NewtonsoftJson/package.json
+          git add UnityPackages/DateTimeTypes.NewtonsoftJson/Runtime/
           git diff --staged --quiet || git commit -m "Update Unity package binaries" || echo "No changes to commit"
           git push
           
