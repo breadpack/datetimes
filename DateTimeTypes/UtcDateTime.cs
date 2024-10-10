@@ -8,6 +8,15 @@ namespace BreadPack.DateTimeTypes {
                               , IComparable
                               , ISerializable {
         private DateTime _dateTime;
+        private DateTime DateTimeOrDefault {
+            get {
+                if (_dateTime.Kind != DateTimeKind.Utc) {
+                    _dateTime = MinValue.ToDateTime();
+                }
+
+                return _dateTime;
+            }
+        }
 
         public static UtcDateTime Now      => new(DateTime.UtcNow);
         public static UtcDateTime MaxValue => new(DateTimeOffset.MaxValue.UtcDateTime);
@@ -42,54 +51,54 @@ namespace BreadPack.DateTimeTypes {
         public UtcDateTime(long ticks)
             : this(new DateTime(ticks, DateTimeKind.Utc)) { }
 
-        public int         Year        => _dateTime.Year;
-        public int         Month       => _dateTime.Month;
-        public int         Day         => _dateTime.Day;
-        public int         Hour        => _dateTime.Hour;
-        public int         Minute      => _dateTime.Minute;
-        public int         Second      => _dateTime.Second;
-        public int         Millisecond => _dateTime.Millisecond;
-        public DayOfWeek   DayOfWeek   => _dateTime.DayOfWeek;
-        public TimeSpan    TimeOfDay   => _dateTime.TimeOfDay;
-        public UtcDateTime Date        => new(_dateTime.Date);
-        public int         DayOfYear   => _dateTime.DayOfYear;
+        public int         Year        => DateTimeOrDefault.Year;
+        public int         Month       => DateTimeOrDefault.Month;
+        public int         Day         => DateTimeOrDefault.Day;
+        public int         Hour        => DateTimeOrDefault.Hour;
+        public int         Minute      => DateTimeOrDefault.Minute;
+        public int         Second      => DateTimeOrDefault.Second;
+        public int         Millisecond => DateTimeOrDefault.Millisecond;
+        public DayOfWeek   DayOfWeek   => DateTimeOrDefault.DayOfWeek;
+        public TimeSpan    TimeOfDay   => DateTimeOrDefault.TimeOfDay;
+        public UtcDateTime Date        => new(DateTimeOrDefault.Date);
+        public int         DayOfYear   => DateTimeOrDefault.DayOfYear;
 
-        public DateTime ToDateTime() => _dateTime;
+        public DateTime ToDateTime() => DateTimeOrDefault;
 
         public DateTime ToLocalTime(TimeZoneInfo? timeZoneInfo = null) {
-            return TimeZoneInfo.ConvertTimeFromUtc(_dateTime, timeZoneInfo ?? TimeZoneInfo.Local);
+            return TimeZoneInfo.ConvertTimeFromUtc(DateTimeOrDefault, timeZoneInfo ?? TimeZoneInfo.Local);
         }
 
         public long ToBinary() {
-            return _dateTime.ToBinary();
+            return DateTimeOrDefault.ToBinary();
         }
 
         public static UtcDateTime FromBinary(long binary) {
             return new(DateTime.FromBinary(binary));
         }
 
-        public override string ToString() => _dateTime.ToString(CultureInfo.InvariantCulture);
+        public override string ToString() => DateTimeOrDefault.ToString(CultureInfo.InvariantCulture);
 
         public int CompareTo(object obj) {
             if (obj is UtcDateTime other) {
-                return _dateTime.CompareTo(other._dateTime);
+                return DateTimeOrDefault.CompareTo(other.DateTimeOrDefault);
             }
             else {
                 throw new ArgumentException("Object is not a UtcDateTime");
             }
         }
 
-        public override int GetHashCode() => _dateTime.GetHashCode();
+        public override int GetHashCode() => DateTimeOrDefault.GetHashCode();
 
         public int CompareTo(UtcDateTime other) {
-            return _dateTime.CompareTo(other._dateTime);
+            return DateTimeOrDefault.CompareTo(other.DateTimeOrDefault);
         }
 
         public bool Equals(UtcDateTime other) {
-            return _dateTime.Equals(other._dateTime);
+            return DateTimeOrDefault.Equals(other.DateTimeOrDefault);
         }
 
-        public override bool Equals(object obj) => obj is UtcDateTime other && _dateTime.Equals(other._dateTime);
+        public override bool Equals(object obj) => obj is UtcDateTime other && DateTimeOrDefault.Equals(other.DateTimeOrDefault);
 
         public static UtcDateTime Parse(string s) => Parse(s, CultureInfo.InvariantCulture);
 
@@ -129,20 +138,20 @@ namespace BreadPack.DateTimeTypes {
             return new(dateTime);
         }
 
-        public static bool operator <(UtcDateTime  a, UtcDateTime b) => a._dateTime < b._dateTime;
-        public static bool operator >(UtcDateTime  a, UtcDateTime b) => a._dateTime > b._dateTime;
-        public static bool operator <=(UtcDateTime a, UtcDateTime b) => a._dateTime <= b._dateTime;
-        public static bool operator >=(UtcDateTime a, UtcDateTime b) => a._dateTime >= b._dateTime;
-        public static bool operator ==(UtcDateTime a, UtcDateTime b) => a._dateTime == b._dateTime;
-        public static bool operator !=(UtcDateTime a, UtcDateTime b) => a._dateTime != b._dateTime;
+        public static bool operator <(UtcDateTime  a, UtcDateTime b) => a.DateTimeOrDefault < b.DateTimeOrDefault;
+        public static bool operator >(UtcDateTime  a, UtcDateTime b) => a.DateTimeOrDefault > b.DateTimeOrDefault;
+        public static bool operator <=(UtcDateTime a, UtcDateTime b) => a.DateTimeOrDefault <= b.DateTimeOrDefault;
+        public static bool operator >=(UtcDateTime a, UtcDateTime b) => a.DateTimeOrDefault >= b.DateTimeOrDefault;
+        public static bool operator ==(UtcDateTime a, UtcDateTime b) => a.DateTimeOrDefault == b.DateTimeOrDefault;
+        public static bool operator !=(UtcDateTime a, UtcDateTime b) => a.DateTimeOrDefault != b.DateTimeOrDefault;
 
-        public static TimeSpan operator -(UtcDateTime a, UtcDateTime b) => a._dateTime - b._dateTime;
+        public static TimeSpan operator -(UtcDateTime a, UtcDateTime b) => a.DateTimeOrDefault - b.DateTimeOrDefault;
 
-        public static UtcDateTime operator +(UtcDateTime a, TimeSpan b) => new(a._dateTime + b);
-        public static UtcDateTime operator -(UtcDateTime a, TimeSpan b) => new(a._dateTime - b);
+        public static UtcDateTime operator +(UtcDateTime a, TimeSpan b) => new(a.DateTimeOrDefault + b);
+        public static UtcDateTime operator -(UtcDateTime a, TimeSpan b) => new(a.DateTimeOrDefault - b);
 
         public static int Compare(UtcDateTime lastDisconnectDate, UtcDateTime lastConnectDate) {
-            return lastDisconnectDate._dateTime.CompareTo(lastConnectDate._dateTime);
+            return lastDisconnectDate.DateTimeOrDefault.CompareTo(lastConnectDate.DateTimeOrDefault);
         }
     }
 }
