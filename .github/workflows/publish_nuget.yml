@@ -31,10 +31,10 @@ jobs:
 
       - name: Copy DLL and PDB to Unity package
         run: |
-          cp DateTimeTypes/bin/Release/netstandard2.1/*.dll UnityProject/Packages/DateTimeTypes/Runtime/
-          cp DateTimeTypes/bin/Release/netstandard2.1/*.pdb UnityProject/Packages/DateTimeTypes/Runtime/
-          cp DateTimeTypes.NewtonsoftJson/bin/Release/netstandard2.1/*.dll UnityProject/Packages/DateTimeTypes.NewtonsoftJson/Runtime/BreadPack.DateTimeTypes.NewtonsoftJson.dll
-          cp DateTimeTypes.NewtonsoftJson/bin/Release/netstandard2.1/*.pdb UnityProject/Packages/DateTimeTypes.NewtonsoftJson/Runtime/BreadPack.DateTimeTypes.NewtonsoftJson.pdb
+          cp -f DateTimeTypes/bin/Release/netstandard2.1/*.dll UnityProject/Packages/DateTimeTypes/Runtime/
+          cp -f DateTimeTypes/bin/Release/netstandard2.1/*.pdb UnityProject/Packages/DateTimeTypes/Runtime/
+          cp -f DateTimeTypes.NewtonsoftJson/bin/Release/netstandard2.1/*.dll UnityProject/Packages/DateTimeTypes.NewtonsoftJson/Runtime/
+          cp -f DateTimeTypes.NewtonsoftJson/bin/Release/netstandard2.1/*.pdb UnityProject/Packages/DateTimeTypes.NewtonsoftJson/Runtime/
 
       - name: Commit files
         run: |
