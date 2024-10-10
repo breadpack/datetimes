@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
         <LangVersion>9</LangVersion>
         <RootNamespace>BreadPack.DateTimeTypes</RootNamespace>
         <AssemblyName>BreadPack.DateTimeTypes</AssemblyName>
@@ -15,14 +15,10 @@
         <PackageTags>DateTime, Kind, Utc, Local, Unspecified</PackageTags>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <Nullable>enable</Nullable>
-        <Title>DateTimeTypes</Title>
+        <Title>BreadPack.DateTimeTypes</Title>
     </PropertyGroup>
 
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="/"/>
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="dev.breadpack.BlittableChecker" Version="1.0.2" />
     </ItemGroup>
 </Project>

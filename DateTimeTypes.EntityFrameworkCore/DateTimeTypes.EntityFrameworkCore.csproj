@@ -14,7 +14,7 @@
         <RepositoryUrl>https://github.com/breadpack/datetimes.git</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <Title>DateTimeTypes.EntityFrameworkCore</Title>
+        <Title>BreadPack.DateTimeTypes.EntityFrameworkCore</Title>
     </PropertyGroup>
 
     <ItemGroup>

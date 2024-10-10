@@ -1,0 +1,20 @@
+﻿{
+  "name": "dev.breadpack.datetimetypes.newtonsoftjson",
+  "version": "1.0.1",
+  "displayName": "DateTimeTypes.NewtonsoftJson",
+  "description": "",
+  "unity": "2021.3",
+  "keywords": [
+    "unity",
+    "package",
+    "datetime"
+  ],
+  "dependencies": {
+    "dev.breadpack.datetimetypes" : "1.0.1"
+  },
+  "author": {
+    "name": "BreadPack",
+    "email": "milennium9@breadpack.dev",
+    "url": "https://github.com/breadpack/datetimes"
+  }
+}

@@ -1,0 +1,17 @@
+﻿{
+  "name": "dev.breadpack.datetimetypes",
+  "version": "1.0.1",
+  "displayName": "DateTimeTypes",
+  "description": "",
+  "unity": "2021.3",
+  "keywords": [
+    "unity",
+    "package",
+    "datetime"
+  ],
+  "author": {
+    "name": "BreadPack",
+    "email": "milennium9@breadpack.dev",
+    "url": "https://github.com/breadpack/datetimes"
+  }
+}

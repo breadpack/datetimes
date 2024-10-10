@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using System.Runtime.Serialization;
-using BlittableChecker;
 
 namespace BreadPack.DateTimeTypes {
-    [Blittable]
     public struct UtcDateTime : IComparable<UtcDateTime>
                               , IEquatable<UtcDateTime>
                               , IComparable
